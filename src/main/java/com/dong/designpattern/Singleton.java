@@ -49,3 +49,40 @@ final class SingletonLazy {
     }
 }
 
+/**
+ * 懒汉式+DoubleCheck+volatile --访问性能好 延迟初始化 线程安全
+ */
+final class SingletonDoubleCheck{
+    //定义一个静态的实例对象
+    private static volatile SingletonDoubleCheck instance = null;
+    //定义私有构造方法，不允许外界直接new 对象
+    private SingletonDoubleCheck(){}
+    //提供全局的访问方法
+    private static SingletonDoubleCheck getInstance(){
+        if (instance == null){
+            synchronized(SingletonDoubleCheck.class){
+                // Double Check -- 第一个线程已经创建对象了，instance不为null,此时不应该再创建对象
+                if (instance == null){
+                    instance = new SingletonDoubleCheck();
+                }
+            }
+        }
+        return instance;
+    }
+}
+/**
+ * 内部类 访问性能好 延迟初始化 线程安全
+ */
+final class SingtonByHolder{
+    //内部类持有SingtonByHolder对象
+    private static class Holder{
+        private static SingtonByHolder instance = new SingtonByHolder();
+    }
+    //私有的构造方法，不允许外部直接new 对象
+    private SingtonByHolder(){}
+
+    public static SingtonByHolder getInstance(){
+        return Holder.instance;
+    }
+}
+
