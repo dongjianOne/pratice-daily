@@ -22,5 +22,26 @@ public class Test {
         System.out.println(add);
         System.out.println(0.1*3);
         System.out.println(0.5*3);
+        System.out.println("13&17--"+(0x13&0x17));
+        String s1 = "+B-C";
+        System.out.println(s1.replaceAll("\\+|\\-", ""));
+        char c = 'A';
+        System.out.println("c----"+String.valueOf(c));
+        System.out.println("index----"+(s1.indexOf("B")-1));
+       String  pattern = "";
+       String s2 = "127E+8";
+        System.out.println("pattern----"+s2.matches(pattern));
+        System.out.println(new BigDecimal("1.27E+8"));
+        System.out.println(s2.replaceAll("\\.|E|\\+", ""));
+        System.out.println("s-----"+"s");
+        System.out.println("h : b".replaceAll("\\s", ""));
+        //分隔符
+        String s3 = "王阳明:108";
+        System.out.println(s3.split("：|:").length);
+        System.out.println("s3--contains"+(s3.contains("：")||s3.contains(":")));
+//        System.out.println(new BigDecimal(""));
+        String s4 = "ss  ";
+        System.out.println("s==="+s4.replaceAll("\\s", "").length());
+
     }
 }
