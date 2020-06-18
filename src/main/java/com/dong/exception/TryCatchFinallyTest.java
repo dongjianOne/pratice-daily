@@ -4,7 +4,7 @@ package com.dong.exception;
  * @Author DongJian
  * @Date Created in 2020/6/12 15:26
  * Utils: Intellij Idea
- * @Description: 测试 finally一定会执行吗？
+ * @Description: 测试 ：finally一定会执行吗？
  * @Version:1.0
  */
 public class TryCatchFinallyTest {
