@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: pratice-daily
+eureka:
+  instance:
+    #    status-page-url-path: /info
+    #    health-check-url-path: /health
+    prefer-ip-address: true #使用IP地址向Eureka Server注册
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://dongjian:dj975573.@localhost:8761/eureka/

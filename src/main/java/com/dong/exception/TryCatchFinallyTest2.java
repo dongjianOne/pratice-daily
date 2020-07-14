@@ -42,5 +42,6 @@ public class TryCatchFinallyTest2 {
         System.out.println(total());
         System.out.println("-------------------------");
         System.out.println(total2());
+
     }
 }

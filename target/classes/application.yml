@@ -1,0 +1,37 @@
+#server:
+#  port: 9000
+#info:
+#  app:
+#    name: pratice-daily
+##    encoding: @project.bulid.sourceEncoding@
+#    java:
+#      source: 1.8.0_191
+#      target: 1.8.0_191
+## 访问配置
+#management:
+#  security:
+#    enabled: false
+#
+##eureka:
+##  instance:
+##    prefer-ip-adress: true #使用IP地址向Eureka Server发起注册
+##  client:
+###    register-with-eureka: true #是否将自己注册到Eureka Server 默认为true
+###    fetch-registry: true #是否从Eureka Server获取注册信息 默认为true
+##    service-url:
+##      defaultZone: http://dongjian:dj975573.@localhost:8761/eureka/
+#eureka:
+#  instance:
+#    #    status-page-url-path: /info
+#    #    health-check-url-path: /health
+#    prefer-ip-address: true #使用IP地址向Eureka Server注册
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#spring:
+#  application:
+#    name: pratice-daily
+#
+#
