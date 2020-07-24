@@ -22,9 +22,9 @@ import java.util.stream.Collectors;
  * @Description:
  * @Version:1.0
  */
+@Slf4j
 public class TestDist {
 
-    public static final Logger log = (Logger) LoggerFactory.getLogger(TestDist.class);
 
     public static void main(String[] args) {
         File file = new File("C:\\Users\\DJ\\Desktop\\估值接口");
@@ -50,6 +50,13 @@ public class TestDist {
         log.info("-----------------------------buffer.split---------------------------------------");
         StringBuffer sb1 = new StringBuffer("a b c");
         System.out.println(sb1.insert(1, ";"));
+        log.info("\n----------------------------------不区分大小写字符串比较---------------------------");
+        String success = "SUCCESS";
+        System.out.println("不区分大小写字符串比较:"+success.equalsIgnoreCase("SUCCESS"));
+        log.info("\n----------------------------------longValue---------------------------");
+        Long lo = 1L;
+        System.out.println("long:"+lo);
+        System.out.println("longValue:"+lo.longValue());
 
 
     }

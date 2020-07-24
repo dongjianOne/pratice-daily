@@ -1,8 +1,9 @@
-package com.dong;
+package com.dong.test;
 
 import org.assertj.core.util.Maps;
 
 import java.io.Console;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -18,14 +19,22 @@ import java.util.regex.Pattern;
 public class Test {
     public static void main(String[] args) {
 //        System.out.println(isMatching("11GH1111", "GH*"));
-        Map<String,String> map = new HashMap<>();
-        map.put("190203:004:447:3801:3696:Mon Mar 23 00:00:00 CST 2020","1");
-        if (map.containsKey("190203:004:447:3801:3696:Mon Mar 23 00:00:00 CST 2020")){
+        Map<String, String> map = new HashMap<>();
+        map.put("190203:004:447:3801:3696:Mon Mar 23 00:00:00 CST 2020", "1");
+        if (map.containsKey("190203:004:447:3801:3696:Mon Mar 23 00:00:00 CST 2020")) {
             System.out.println("hello");
         }
 
+        BigDecimal bigDecimal = new BigDecimal("100.0");
+        System.out.println("bigDecimal:"+bigDecimal.subtract(BigDecimal.ZERO));
     }
-    public static boolean isMatching(String src,String des){
+    /**
+     * @Description 字符串通配符处理
+     * @Author dongjian 2020/7/14 16:56
+     * @Param [src, des]
+     * @return boolean
+     **/
+    public static boolean isMatching(String src, String des) {
         String des1 = des.replace("*", "\\w*");
         des1 = des1.replace("?", "\\w{1}");
         Pattern p = Pattern.compile(des1);
