@@ -27,6 +27,11 @@ public class Test {
 
         BigDecimal bigDecimal = new BigDecimal("100.0");
         System.out.println("bigDecimal:"+bigDecimal.subtract(BigDecimal.ZERO));
+
+        System.out.println("--强制类型转换：小数转为整型采用‘去1法’无条件舍弃小数点后数字--");
+        double d = 0.1d;
+        int in = (int) d;
+        System.out.println(in);
     }
     /**
      * @Description 字符串通配符处理

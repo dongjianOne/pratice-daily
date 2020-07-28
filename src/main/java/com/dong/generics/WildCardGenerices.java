@@ -3,6 +3,7 @@ package com.dong.generics;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.Lists;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
@@ -81,5 +82,8 @@ public class WildCardGenerices {
         System.out.println("---------------------------------泛型与通配符 总结：--------------------------------------");
         System.out.println("如果参数类型之间有依赖关系或者返回值与参数有依赖关系，选择泛型方法");
         System.out.println("如果不存在依赖关系，则选择通配符，通配符更加灵活");
+
+
+//        new ArrayList<String>().forEach();
     }
 }
