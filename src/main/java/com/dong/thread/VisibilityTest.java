@@ -27,7 +27,7 @@ public class VisibilityTest {
     }
 
     private static class WriterThread extends Thread {
-        public void run(){
+        public void run() {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
