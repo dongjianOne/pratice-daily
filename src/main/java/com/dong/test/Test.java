@@ -1,11 +1,11 @@
 package com.dong.test;
 
 import org.assertj.core.util.Maps;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.Console;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,6 +17,8 @@ import java.util.regex.Pattern;
  * @Version:1.0
  */
 public class Test {
+    @Value("${ra.gzPushRule}")
+    public static List<String> list = new ArrayList<>(10);
     public static void main(String[] args) {
 //        System.out.println(isMatching("11GH1111", "GH*"));
         Map<String, String> map = new HashMap<>();
@@ -32,6 +34,8 @@ public class Test {
         double d = 0.1d;
         int in = (int) d;
         System.out.println(in);
+        System.out.println("list--"+list);
+
     }
     /**
      * @Description 字符串通配符处理

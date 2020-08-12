@@ -150,4 +150,15 @@ public class PoiWriter03 {
         long end = System.currentTimeMillis();
         System.out.println("使用的时间为：" + (double) (end - start) / 1000);
     }
+
+    public static void main(String[] args) {
+        // 1.创建工作簿
+        Workbook wb = new HSSFWorkbook();
+        // 2.创建一个工作表
+        Sheet sheet = wb.createSheet("任务完成情况统计表");
+        //获取指定sheet页
+        Sheet sheetAt = wb.getSheetAt(0);
+        // 测试输出sheet名称
+        System.out.println(sheetAt.getSheetName());
+    }
 }
