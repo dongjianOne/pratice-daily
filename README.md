@@ -1,1 +1,1 @@
-# pratice-daily
+# djadmin
