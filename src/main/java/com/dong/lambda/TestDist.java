@@ -58,6 +58,10 @@ public class TestDist {
         System.out.println("long:"+lo);
         System.out.println("longValue:"+lo.longValue());
 
+        log.info("\n---------------------------------toLowerCase--------------------------------------");
+        String dong = "孙权donG";
+        System.out.println(dong.toLowerCase());
+
 
     }
 
