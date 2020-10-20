@@ -13,7 +13,7 @@ import java.util.*;
 public class ReadPdfToExcel  {
 
         public static void main(String[] args) throws FileNotFoundException {
-            String path="E:\\表文件\\新华资产-明鑫3号资产管理产品（7511-142335）_192834697.pdf";
+            String path="E:\\表文件\\192834697.pdf";
             readPdfToExcel1(path);
         }
 
@@ -27,7 +27,7 @@ public class ReadPdfToExcel  {
         //增值税
         private static Sheet readPdfToExcel1(String path) throws FileNotFoundException {
             //模板文件所在路径
-            String mbPath ="E:\\表文件\\新华资产-明鑫3号资产管理产品（7511-142335）_192834697.xlsx";
+            String mbPath ="E:\\表文件\\192834697.xlsx";
             //工具类读取excel文件模板
             ReadExcelUtil readExcelUtil = new ReadExcelUtil(mbPath, "sheet");
             //表名

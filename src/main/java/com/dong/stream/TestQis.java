@@ -18,7 +18,7 @@ import java.util.*;
 public class TestQis {
 
     public static void main(String[] args) {
-        String data = "付【沪港通风控资金利息(月度拆分)】(2019年五月)";
+        String data = "港股通风控资金一级清算_深圳付款";
         TestQis testQis = new TestQis();
         String needData = testQis.getMarketFromSummary(testQis.setMapData(), data, null, true);
         log.info("业务类型为：{}",needData);
@@ -77,9 +77,9 @@ public class TestQis {
         ParaKeyValue paraKeyValue = new ParaKeyValue();
         paraKeyValue.setId("0be1d4e090e111e9bc42526af7764f64");
         paraKeyValue.setParaCode("qisMarket");
-        paraKeyValue.setParaKey("上海港股通");
+        paraKeyValue.setParaKey("深圳");
         paraKeyValue.setParaNote("季度结息市场，key为类型，value为模糊内容");
-        paraKeyValue.setParaValue("上海港股通:沪港通:港股通上海");
+        paraKeyValue.setParaValue("上海港股通:沪港通:港股通上海:深圳");
         cleParaKeyvalueVOS.add(paraKeyValue);
         for (ParaKeyValue cleParaKeyvalueVO : cleParaKeyvalueVOS) {
             String[] values = cleParaKeyvalueVO.getParaValue().split(":");
