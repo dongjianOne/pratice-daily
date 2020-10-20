@@ -15,6 +15,10 @@ public class User {
     private String name;
     private String age;
 
+    // 无参构造方法
+    public User() {
+    }
+
     /**
      * @return
      * @Description 构造函数
@@ -24,5 +28,14 @@ public class User {
     public User(String name, String age) {
         this.name = name;
         this.age = age;
+    }
+    // 私有构造方法
+    private User(String name) {
+        this.name = name;
+    }
+    // 私有method
+
+    private void test(){
+
     }
 }
