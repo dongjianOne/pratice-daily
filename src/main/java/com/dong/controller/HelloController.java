@@ -1,10 +1,9 @@
 package com.dong.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,8 +16,22 @@ import java.util.List;
 @RestController
 public class HelloController {
     @GetMapping("hello")
-    public String hello(@RequestBody List<User> list){
+    public String hello(@RequestBody List<User> list) {
         System.out.println(list);
         return "hello";
+    }
+
+    @GetMapping("param/{id}")
+    public User test(@PathVariable String id) {
+        User user = new User();
+        user.setId(id);
+        user.setName("曹操");
+        return user;
+    }
+
+    @GetMapping("hello1")
+    public List<String> hello1() {
+        List<String> list = Arrays.asList("曹操", "刘备");
+        return list;
     }
 }

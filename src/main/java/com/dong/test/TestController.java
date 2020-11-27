@@ -17,11 +17,11 @@ import java.util.List;
 @RestController
 public class TestController {
 
-    @Value("#{'${ra.gzPushRule}'.split(',')}")
-    public  List<String> arr;
-
-    @GetMapping("/test")
-    public void test(){
-        System.out.println(arr);
-    }
+//    @Value("#{'${ra.gzPushRule}'.split(',')}")
+//    public  List<String> arr;
+//
+//    @GetMapping("/test")
+//    public void test(){
+//        System.out.println(arr);
+//    }
 }
