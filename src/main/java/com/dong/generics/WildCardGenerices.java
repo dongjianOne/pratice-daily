@@ -1,5 +1,6 @@
 package com.dong.generics;
 
+import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.Lists;
 
@@ -82,7 +83,14 @@ public class WildCardGenerices {
         System.out.println("---------------------------------泛型与通配符 总结：--------------------------------------");
         System.out.println("如果参数类型之间有依赖关系或者返回值与参数有依赖关系，选择泛型方法");
         System.out.println("如果不存在依赖关系，则选择通配符，通配符更加灵活");
-
+        // ------------------------------泛型只在编译期有效------------------------------------------------------
+        List<String> stringList = Lists.newArrayList();
+        List<Integer> integerList = Lists.newArrayList();
+        Class<? extends List> aClass = stringList.getClass();
+        Class<? extends List> bClass = integerList.getClass();
+        if (aClass.equals(bClass)) {
+            System.out.println("类型相同");
+        }
 
 //        new ArrayList<String>().forEach();
     }
