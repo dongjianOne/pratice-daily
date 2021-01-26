@@ -1,6 +1,6 @@
 package com.dong.controller;
 
-import org.springframework.stereotype.Controller;
+import com.dong.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
