@@ -2,7 +2,10 @@ package com.dong.jdk;
 
 
 import com.dong.entity.User;
+import org.assertj.core.util.Lists;
 
+import javax.swing.text.html.Option;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -41,11 +44,18 @@ public class OptionalStudy {
         // orElseGet(Supplier<? extends T> other)  有值的时候返回值 没值则执行入参内容
         Optional.ofNullable(user2).orElseGet(() -> createNewUser("orElseGet"));
 
+        // orElseThrow() 对象为空则抛出异常
+//        Optional.ofNullable(null).orElseThrow(RuntimeException::new);
 
 
+        // map 若不为空则取一个属性值，若对象或者属性值为空则返回默认值
+        user.setName("dongjian");
+        String default_name = Optional.ofNullable(user).map(User::getName).orElseGet(()->"Default name");
+        System.out.println(default_name);
 
-
-
+        // 对象不为空 且满足filter条件则返回对象，否则抛出异常
+        User d = Optional.ofNullable(user).filter(u -> u.getName().equals("dongjian")).orElseThrow(RuntimeException::new);
+        System.out.println(d);
     }
 
     /**

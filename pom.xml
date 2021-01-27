@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>../spting-web-crawler-demo</module>
-    </modules>
+    <!--<packaging>pom</packaging>-->
+    <!--<modules>-->
+        <!--<module>../spting-web-crawler-demo</module>-->
+    <!--</modules>-->
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -65,18 +65,18 @@
             <artifactId>spring-cloud-netflix-eureka-client</artifactId>
             <version>2.0.1.RELEASE</version>
         </dependency>
-		<!--03版本-->
-<!--		<dependency>-->
-<!--			<groupId>org.apache.poi</groupId>-->
-<!--			<artifactId>poi</artifactId>-->
-<!--			<version>4.1.1</version>-->
-<!--		</dependency>-->
-<!--		&lt;!&ndash;07版本&ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.apache.poi</groupId>-->
-<!--			<artifactId>poi-ooxml</artifactId>-->
-<!--			<version>4.1.1</version>-->
-<!--		</dependency>-->
+		03版本
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+		<!--07版本-->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.1</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
