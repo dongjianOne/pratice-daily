@@ -1,6 +1,9 @@
-package com.dong.controller;
+package com.dong.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 /**
  * @Author DongJian
@@ -10,6 +13,9 @@ import lombok.Data;
  * @Version:1.0
  */
 @Data
+@Getter
+@Setter
+@Accessors(chain = true)
 public class User {
     /**
      *  编号
