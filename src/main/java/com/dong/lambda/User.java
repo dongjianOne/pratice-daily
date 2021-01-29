@@ -35,7 +35,7 @@ public class User {
     }
     // 私有method
 
-    private void test(){
-
+    public void test(){
+        System.out.println("执行了User类的test方法");
     }
 }
