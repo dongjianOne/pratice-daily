@@ -5,7 +5,7 @@ import java.net.URLDecoder;
 import java.util.Base64;
 
 /**
- * 前端入参乱码
+ * 前端入参转义字符
  */
 public class UtfCodeTest {
 
