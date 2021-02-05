@@ -93,5 +93,8 @@ public class WildCardGenerices {
         }
 
 //        new ArrayList<String>().forEach();
+
+        List<?> list = Lists.newArrayList();
+//        list.add("10"); // 报错，？类型未知
     }
 }

@@ -34,4 +34,10 @@ spring:
   application:
     name: pratice-daily
 
+ra:
+  gzPushRule: BX0027,BX0028,BX0029
+
+
+
+
 
