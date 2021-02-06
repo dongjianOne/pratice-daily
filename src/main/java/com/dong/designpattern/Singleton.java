@@ -2,10 +2,7 @@ package com.dong.designpattern;
 
 /**
  * @Author DongJian
- * @Date Created in 2020/5/15 0:31
- * Utils: Intellij Idea
  * @Description: 单例涉及模式的几种实现方式
- * @Version:1.0
  */
 public class Singleton {
     /**
@@ -74,8 +71,9 @@ final class SingletonDoubleCheck{
  * 内部类 访问性能好 延迟初始化 线程安全
  */
 final class SingtonByHolder{
-    //内部类持有SingtonByHolder对象
+    // 内部类持有SingtonByHolder对象，类加载机制决定一个类只能被初始化一次
     private static class Holder{
+        // 多线程情况下也只会有一个实例
         private static SingtonByHolder instance = new SingtonByHolder();
     }
     //私有的构造方法，不允许外部直接new 对象

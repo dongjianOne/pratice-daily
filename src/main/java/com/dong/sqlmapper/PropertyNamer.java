@@ -1,10 +1,8 @@
-package org.apache.ibatis.reflection.property;
+package com.dong.sqlmapper;
 
 import java.util.Locale;
 import java.util.stream.Stream;
 
-import lombok.Data;
-import org.apache.ibatis.reflection.ReflectionException;
 
 /**
  * @author DJ
@@ -22,7 +20,7 @@ public final class PropertyNamer {
         } else if (name.startsWith("get") || name.startsWith("set")) {//set-get的就从第三个(索引)开始截取
             name = name.substring(3);
         } else {
-            throw new ReflectionException("Error parsing property name '" + name + "'.  Didn't start with 'is', 'get' or 'set'.");
+//            throw new ReflectionException("Error parsing property name '" + name + "'.  Didn't start with 'is', 'get' or 'set'.");
         }
         //下面这个判断很重要，可以分成两句话开始解释，解释如下
         //第一句话：name.length()==1
