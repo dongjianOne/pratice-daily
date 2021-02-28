@@ -1,16 +1,16 @@
 server:
   port: 9000
-info:
-  app:
-    name: @project.artifactId@
-#    encoding: @project.bulid.sourceEncoding@
-    java:
-      source: @java.version@
-      target: @java.version@
+#info:
+#  app:
+#    name: @project.artifactId@
+##    encoding: @project.bulid.sourceEncoding@
+#    java:
+#      source: @java.version@
+#      target: @java.version@
 # 访问配置
-management:
-  security:
-    enabled: false
+#management:
+#  security:
+#    enabled: false
 
 #eureka:
 #  instance:
