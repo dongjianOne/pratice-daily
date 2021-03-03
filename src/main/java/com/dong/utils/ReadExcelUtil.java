@@ -54,7 +54,7 @@ public class ReadExcelUtil {
      */
     public String getCellStringValue(Cell cell, String defaultValue) {
         if (cell != null) {
-            cell.setCellType(cell.CELL_TYPE_STRING);
+//            cell.setCellType(cell.CELL_TYPE_STRING);
             return cell.getStringCellValue();
         }
 
@@ -93,7 +93,7 @@ public class ReadExcelUtil {
                 String key = keys[j];
                 String value = MapUtils.getString(data, key, "");
                 cell = row.createCell(j);
-                cell.setCellType(Cell.CELL_TYPE_STRING);
+//                cell.setCellType(Cell.CELL_TYPE_STRING);
                 cell.setCellValue(value);
             }
         }
