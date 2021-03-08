@@ -12,6 +12,7 @@ import java.lang.annotation.Target;
  * @description:
  * @version:1.0
  */
+@MyAnnotation1(value = "dongjian",age = 21)
 public class CustomAnnotation {
 
     @MyAnnotation1(value = "dongjian",age = 21)
@@ -21,7 +22,7 @@ public class CustomAnnotation {
 }
 
 // 自定义注解
-@Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD})
+@Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @interface MyAnnotation1 {
     String value() default "";

@@ -3,11 +3,13 @@ package com.dong.tree.utils;
 import com.dong.tree.model.TreeNode;
 import org.springframework.util.ObjectUtils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>
- * 实现
+ * 树操作
  * </p>
  *
  * @author: dong
@@ -16,23 +18,26 @@ import java.util.LinkedList;
 public class TreeUtil {
 
     /**
-     * 创建树
-     * @param list
+     * 创建树(创建方式有多种)
+     * @param
      * @return
      */
-    public static TreeNode createBinaryTree(LinkedList<Integer> list) {
-        TreeNode treeNode = null;
-        if (ObjectUtils.isEmpty(list)) {
-            return null;
+    public static List<TreeNode> createBinaryTree(List<Integer> arrs) {
+        List<TreeNode> nodes = new ArrayList<TreeNode>();
+        for (int data : arrs) {
+            nodes.add(new TreeNode(data));
         }
-        // 取出第一个元素
-        Integer data = list.removeFirst();
-        if (!ObjectUtils.isEmpty(data)) {
-            treeNode = new TreeNode(data);
-            treeNode.leftChild = createBinaryTree(list);
-            treeNode.rightChild = createBinaryTree(list);
+        //arrs.length / 2 - 1是确保最后一个节点的左右子节点都存在
+        for (int parentIndex = 0; parentIndex < arrs.size() / 2 - 1; parentIndex++) {
+            nodes.get(parentIndex).leftChild = nodes.get(parentIndex * 2 + 1);
+            nodes.get(parentIndex).rightChild = nodes.get(parentIndex * 2 + 2);
         }
-        return treeNode;
+        int lastParentIndex = arrs.size() / 2 - 1;
+        nodes.get(lastParentIndex).leftChild = nodes.get(lastParentIndex * 2 + 1);
+        if(arrs.size() % 2 != 0){
+            nodes.get(lastParentIndex).rightChild = nodes.get(lastParentIndex * 2 + 2);
+        }
+        return nodes;
     }
 
     /**
@@ -46,5 +51,31 @@ public class TreeUtil {
         System.out.print(node.data + " ");
         proOrderTraversal(node.leftChild);
         proOrderTraversal(node.rightChild);
+    }
+
+    /**
+     * 中序遍历：左-右-根
+     * @param node
+     */
+    public static void inOrderTraversal(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+        inOrderTraversal(node.leftChild);
+        System.out.print(node.data + " ");
+        inOrderTraversal(node.rightChild);
+    }
+
+    /**
+     * 后序遍历：左-右-根
+     * @param node
+     */
+    public static void postOrderTraversal(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+        postOrderTraversal(node.leftChild);
+        postOrderTraversal(node.rightChild);
+        System.out.print(node.data + " ");
     }
 }
