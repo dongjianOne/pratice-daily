@@ -24,6 +24,7 @@ public class CombinationParamsUtilsByDJ {
     private static final Comparator<Map.Entry<String, Object>> VALUE_REVERSE_COMPARATOR =
             Map.Entry.comparingByValue(Comparator.comparing(Objects::toString, Comparator.reverseOrder()));
 
+    private static final Comparator<Map.Entry<String, Object>> NO_ORDER_COMPARATOR = (o1, o2) -> 0;
     /**
      * Mapping to queryParams.
      *
@@ -35,7 +36,7 @@ public class CombinationParamsUtilsByDJ {
             return EMPTY;
         }
         StringBuilder sb = new StringBuilder();
-        params.entrySet().stream().sorted(sortedInfo.getComparator()).forEach(e -> combination(e, sb));
+        params.entrySet().stream().sorted(sortedInfo.comparator).forEach(e -> combination(e, sb));
         return sb.deleteCharAt(0).toString();
     }
 
@@ -76,7 +77,7 @@ public class CombinationParamsUtilsByDJ {
          *
          * @see java.util.LinkedHashMap
          */
-        NO_ORDER((o1, o2) -> 0),
+        NO_ORDER(NO_ORDER_COMPARATOR),
 
         ;
 
@@ -85,10 +86,5 @@ public class CombinationParamsUtilsByDJ {
         }
 
         private final Comparator<Map.Entry<String, Object>> comparator;
-
-        public Comparator<Map.Entry<String, Object>> getComparator() {
-            return comparator;
-        }
-
     }
 }

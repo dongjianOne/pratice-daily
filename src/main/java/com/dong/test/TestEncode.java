@@ -1,10 +1,9 @@
 package com.dong.test;
 
-import org.assertj.core.util.Lists;
-
+import java.io.File;
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.List;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * <p>
@@ -17,9 +16,12 @@ import java.util.List;
 public class TestEncode {
     public static void main(String[] args) throws UnsupportedEncodingException {
 //        System.out.println(URLEncoder.encode("+","utf-8"));
-        List<String> list = null;
-        list.stream().forEach(s -> {
-            System.out.println(s);
-        });
+//        List<String> list = null;
+//        list.stream().forEach(s -> {
+//            System.out.println(s);
+//        });
+        String fixedCatalog = "gzqh";
+        String path = String.join(File.separator, fixedCatalog, LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE));
+        System.out.println(path);
     }
 }
