@@ -6,6 +6,7 @@ import org.springframework.util.ObjectUtils;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * <p>
@@ -77,5 +78,21 @@ public class TreeUtil {
         postOrderTraversal(node.leftChild);
         postOrderTraversal(node.rightChild);
         System.out.print(node.data + " ");
+    }
+
+    /**
+     * 层序遍历(深度优先遍历)
+     * @param root
+     */
+    public static void levelOrder(TreeNode root) {
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            // 出队
+            root = queue.pop();
+            System.out.print(root.data + " ");
+            Optional.ofNullable(root.leftChild).ifPresent(queue::add);
+            Optional.ofNullable(root.rightChild).ifPresent(queue::add);
+        }
     }
 }

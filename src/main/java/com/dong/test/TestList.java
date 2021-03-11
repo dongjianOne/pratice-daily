@@ -24,7 +24,7 @@ public class TestList {
 //        System.out.println("---"+list.size());
 //        String format = LocalDate.now().format(formatter);
 //        System.out.println("date:"+format);
-        log.info("--------------------------------集合前后赋值变化:set会导致后面的集合值也会发生变化--------------------------------");
+        /*log.info("--------------------------------集合前后赋值变化:set会导致后面的集合值也会发生变化--------------------------------");
         List<User> us1 = Lists.newArrayList();
         User u1 = new User();
         u1.setName("曹操");
@@ -41,6 +41,6 @@ public class TestList {
         u3.setName("关羽");
         u3.setAge(30);
         us1.add(u3);
-        System.out.println("修改us1后us2的值："+ us2);
+        System.out.println("修改us1后us2的值："+ us2);*/
     }
 }

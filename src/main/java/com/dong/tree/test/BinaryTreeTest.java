@@ -6,8 +6,7 @@ import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * <p>
@@ -52,5 +51,26 @@ public class BinaryTreeTest {
         System.out.println("\n-----------树的后序遍历-----------------");
         TreeUtil.postOrderTraversal(node);
 
+        System.out.println("\n-----------树的层序遍历------------------");
+        TreeUtil.levelOrder(node);
+
+    }
+
+    /**
+     * 利用TreeMap构建一棵树
+     * @return
+     */
+    static TreeMap<String, String> createTreeMap() {
+        TreeMap<String, String> map = new TreeMap<>();
+        map.put("1", "1");
+        map.put("2", "2");
+        map.put("3", "3");
+        map.put("4", "4");
+        map.put("5", "5");
+        map.put("6", "6");
+        map.put("7", "7");
+        map.put("8", "8");
+        map.put("9", "9");
+        return map;
     }
 }

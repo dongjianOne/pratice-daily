@@ -1,16 +1,16 @@
 server:
   port: 9000
-info:
-  app:
-    name: pratice-daily
-#    encoding: @project.bulid.sourceEncoding@
-    java:
-      source: 1.8.0_191
-      target: 1.8.0_191
+#info:
+#  app:
+#    name: pratice-daily
+##    encoding: @project.bulid.sourceEncoding@
+#    java:
+#      source: 1.8.0_191
+#      target: 1.8.0_191
 # 访问配置
-management:
-  security:
-    enabled: false
+#management:
+#  security:
+#    enabled: false
 
 #eureka:
 #  instance:
