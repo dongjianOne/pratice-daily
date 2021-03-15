@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import java.math.BigDecimal;
+
 /**
  * @Author DongJian
  * @Date Created in 2020/5/9 16:53
@@ -25,4 +27,16 @@ public class User {
      * 名称
      */
     private String name;
+    /**
+     * 年级
+     */
+    private String grade;
+    /**
+     * 经费
+     */
+    private BigDecimal balance;
+    /**
+     * 年龄
+     */
+    private Integer age;
 }

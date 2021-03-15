@@ -1,9 +1,10 @@
 package com.dong.test;
 
-import com.dong.utils.CombinationParamsUtilsByDJ;
+import lombok.Data;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 
 public class MapTest {
@@ -28,10 +29,18 @@ public class MapTest {
         forkJoinPool.awaitQuiescence(1, TimeUnit.HOURS);
     */
 
-        Map<String, Object> params = new HashMap<>(16);
+        /*Map<String, Object> params = new HashMap<>(16);
         params.put("name", "jude");
         params.put("action", "select");
         String url = CombinationParamsUtilsByDJ.mappingToQueryParams(params, CombinationParamsUtilsByDJ.SortedInfo.KEY_DESC);
-        System.out.println(url);
+        System.out.println(url);*/
+        FileArray fileArray = new FileArray();
+        List<String> list = Optional.ofNullable(fileArray.getData()).orElseGet(ArrayList::new);
+        System.out.println(list);
     }
+}
+@Data
+class FileArray {
+    private List<String> data;
+    private Integer status;
 }
