@@ -82,22 +82,15 @@ public class SummingUtil {
         private final Set<Characteristics> characteristics;
 
         CollectorImpl(Supplier<A> supplier,
-                      BiConsumer<A, T> accumulator,
-                      BinaryOperator<A> combiner,
-                      Function<A, R> finisher,
-                      Set<Characteristics> characteristics) {
+                       BiConsumer<A, T> accumulator,
+                       BinaryOperator<A> combiner,
+                       Function<A, R> finisher,
+                       Set<Characteristics> characteristics) {
             this.supplier = supplier;
             this.accumulator = accumulator;
             this.combiner = combiner;
             this.finisher = finisher;
             this.characteristics = characteristics;
-        }
-
-        CollectorImpl(Supplier<A> supplier,
-                      BiConsumer<A, T> accumulator,
-                      BinaryOperator<A> combiner,
-                      Set<Characteristics> characteristics) {
-            this(supplier, accumulator, combiner, castingIdentity(), characteristics);
         }
 
         @Override

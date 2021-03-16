@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * @author dong
  * @version 1.0
  */
-@FunctionalInterface
+@FunctionalInterface // 函数式接口检查(可不写)
 public interface ToBigDecimalFunction<T> {
 
     /**
