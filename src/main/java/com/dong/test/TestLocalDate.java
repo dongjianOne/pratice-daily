@@ -38,8 +38,8 @@ public class TestLocalDate {
 //        System.out.println(LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.parse("04:00:00")));
         // 判断两个时间是否是同一天
 //        System.out.println(LocalDateTime.now().isEqual(LocalDateTime.now()));
-//        LocalDate localDate = LocalDate.of(2020, 12, 31);
-//        LocalDateTime currentTime = LocalDateTime.of(localDate, LocalTime.parse("09:00:00"));
+//        LocalDate localDateJava8 = LocalDate.of(2020, 12, 31);
+//        LocalDateTime currentTime = LocalDateTime.of(localDateJava8, LocalTime.parse("09:00:00"));
 //        System.out.println(currentTime.toLocalDate());
 //        System.out.println(currentTime.toLocalDate().isEqual(LocalDate.now()));
 //        System.out.println(System.currentTimeMillis());

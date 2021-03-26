@@ -38,7 +38,7 @@
 //        // 配置的文件目录 todo
 //        List<String> tableOfContents = Arrays.asList("中信期货", "国泰君安期货");
 //
-//        String localDate = LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE);
+//        String localDateJava8 = LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE);
 //        // 文档库配置信息 todo
 //        String ip = "10.10.3.107";
 //        String address = "http://10.10.3.107:9000";
